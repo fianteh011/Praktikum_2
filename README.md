@@ -4,8 +4,18 @@ Ziel dieses Aufgabenblatts ist es, weiter mit der Anwendung von Interfaces vertr
 um eine lose Kopplung zwischen Klassen unterschiedlicher Packages
 sicherzustellen und Abhängigkeiten umzukehren.
 
-Package UI beinhaltet folgende Klassen:
+TODO Liste:
+1)Mohammed: 
+- Klassen NutzerEingabe
+
+
+2)Hafiyyan:
 - SpielfeldDarstellung 
-- NutzerEingabe
-- Quadrat
-- Steuerung 
+
+
+3)Birte: 
+- Klasse Quadrat 
+!
+Treffen am Freitag / Sonntag
+!
+Klasse "Steuerung" ganz am Ende implementieren
