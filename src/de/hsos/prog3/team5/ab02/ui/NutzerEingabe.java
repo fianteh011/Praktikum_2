@@ -1,7 +1,11 @@
 package de.hsos.prog3.team5.ab02.ui;
 import de.hsos.prog3.team5.ab02.util.*;
 
+
+
 public class NutzerEingabe {
+    static  int MIN = 2;
+    static  int MAX = 50;
     private EinUndAusgabe io;
 
     public NutzerEingabe(EinUndAusgabe io){
@@ -15,7 +19,7 @@ public class NutzerEingabe {
         while (true){
             System.out.print("Anzahl der Zellen (mind. 2): ");
             anzahl=  io.leseInteger();
-            if(anzahl < 2)
+            if(anzahl < MIN)
                 System.out.println("Biite nochmal!");
             else
                 break;
@@ -41,7 +45,7 @@ public class NutzerEingabe {
         while (true){
             System.out.print("Anzahl der imulationsschritte (mind. 2 & max. 50): ");
             anzahl = io.leseInteger();
-            if(anzahl < 2 || anzahl > 50)
+            if(anzahl < MIN || anzahl > MAX)
                 System.out.println("Biite nochmal!");
             else
                 break;
