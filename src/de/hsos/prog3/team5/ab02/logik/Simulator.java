@@ -1,19 +1,40 @@
 package de.hsos.prog3.team5.ab02.logik;
 
+import java.util.Random;
+
 public class Simulator implements Simulation {
 
     private BeiAenderung beiAenderung;
+    
     private boolean[][] spielfeld;
-    public static boolean bewohnt;
 
+    private Random rnd;
+
+    public static boolean BEWOHNT = true;
+    public static boolean UNBEWOHNT = false;
+    int zufallsZahl;
+    //vllt kein Konstruktor?
     public Simulator() {
-
+        rnd = new Random();
     }
+
 
     @Override
     public void berechneAnfangsGeneration(int anzahlDerZeilen, int wahrscheinlichkeitDerBesiedlung) {
-        if (spielfeld != null) beiAenderung.aktualisiere(spielfeld);
-
+        this.spielfeld = new boolean[anzahlDerZeilen][anzahlDerZeilen];
+        if (beiAenderung != null) {
+            for (int x = 0; x < spielfeld.length; x++) {
+                for (int y = 0; y < spielfeld.length; y++) {
+                   zufallsZahl = rnd.nextInt();
+                    if (zufallsZahl <= wahrscheinlichkeitDerBesiedlung){
+                        this.spielfeld[x][y] = BEWOHNT;
+                    } else {
+                        this.spielfeld[x][y] = UNBEWOHNT;
+                    }
+                }
+            }
+            beiAenderung.aktualisiere(spielfeld);
+        }
     }
 
     @Override
