@@ -7,12 +7,12 @@ public class Simulator implements Simulation {
     }
 
     @Override
-    public void berechneFolgeGeneration(int berechnungschnitte) {
+    public void berechneFolgeGeneration(int berechnungschritte) {
 
     }
 
     @Override
-    public void anmeldenFuerAktulienderung(BeiAenderung beiAenderung) {
+    public void anmeldenFuerAktualisierungBeiAenderung(BeiAenderung beiAenderung) {
 
     }
 }
