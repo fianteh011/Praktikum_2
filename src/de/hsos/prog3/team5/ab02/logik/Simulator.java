@@ -76,6 +76,7 @@ public class Simulator implements Simulation {
 */
     @Override
     public void anmeldenFuerAktualisierungBeiAenderung(BeiAenderung beiAenderung) {
-
+        if(beiAenderung != null)
+            this.beiAenderung = beiAenderung;
     }
 }

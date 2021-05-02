@@ -3,6 +3,8 @@ import de.hsos.prog3.team5.ab02.util.*;
 
 public class NutzerEingabe {
     private EinUndAusgabe io;
+    private static int MIN = 2;
+    private static int MAX = 50;
 
     public NutzerEingabe(EinUndAusgabe io){
         if(io != null){

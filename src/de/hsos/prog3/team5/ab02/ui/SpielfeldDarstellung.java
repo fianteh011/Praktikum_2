@@ -14,6 +14,8 @@ public class SpielfeldDarstellung {
     }
 
     public void spielfeldDarstellen(boolean[][] spielfeld) {
+        abwischen();
+        //System.out.println(spielfeld.length);
         for (int y = 0; y < spielfeld.length; y++) {
             for (int x = 0; x < spielfeld.length; x++) {
                 Quadrat sq = new Quadrat((SEITENLAENGE / spielfeld.length + MARGIN) * x, (SEITENLAENGE / spielfeld.length + MARGIN) * y,
