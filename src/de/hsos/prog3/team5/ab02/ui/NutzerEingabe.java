@@ -4,21 +4,21 @@ import de.hsos.prog3.team5.ab02.util.*;
 
 
 public class NutzerEingabe {
-    static  int MIN = 2;
-    static  int MAX = 50;
+    static int MIN = 2;
+    static int MAX = 50;
     private EinUndAusgabe io;
-    private static int MIN = 2;
-    private static int MAX = 50;
+//    private static int MIN = 2;
+//    private static int MAX = 50;
 
-    public NutzerEingabe(EinUndAusgabe io){
-        if(io != null){
+    public NutzerEingabe(EinUndAusgabe io) {
+        if (io != null) {
             this.io = io;
         }
     }
 
-    public int anzahlZellenDesSpielfelds(){
+    public int anzahlZellenDesSpielfelds() {
         int anzahl;
-        while (true){
+        while (true) {
             System.out.print("Anzahl der Zellen (mind. 2): ");
             anzahl=  io.leseInteger();
             if(anzahl < MIN)
