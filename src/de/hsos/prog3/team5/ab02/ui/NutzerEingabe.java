@@ -7,6 +7,8 @@ public class NutzerEingabe {
     static  int MIN = 2;
     static  int MAX = 50;
     private EinUndAusgabe io;
+    private static int MIN = 2;
+    private static int MAX = 50;
 
     public NutzerEingabe(EinUndAusgabe io){
         if(io != null){
@@ -20,7 +22,8 @@ public class NutzerEingabe {
             System.out.print("Anzahl der Zellen (mind. 2): ");
             anzahl=  io.leseInteger();
             if(anzahl < MIN)
-                System.out.println("Biite nochmal!");
+
+                System.out.println("Bitte nochmal!");
             else
                 break;
         }
@@ -33,7 +36,7 @@ public class NutzerEingabe {
             System.out.print("Wahrscheinlichkeit der Besiedlung (1-100): ");
             wert = io.leseInteger();
             if(wert < 1 || wert > 100)
-                System.out.println("Biite nochmal!");
+                System.out.println("Bitte nochmal!");
             else
                 break;
         }
@@ -43,10 +46,11 @@ public class NutzerEingabe {
     public int anzahlDerSimulationsschritte(){
         int anzahl;
         while (true){
-            System.out.print("Anzahl der imulationsschritte (mind. 2 & max. 50): ");
+            System.out.print("Anzahl der Simulationsschritte (mind. 2 & max. 50): ");
             anzahl = io.leseInteger();
             if(anzahl < MIN || anzahl > MAX)
-                System.out.println("Biite nochmal!");
+
+                System.out.println("Bitte nochmal!");
             else
                 break;
         }
