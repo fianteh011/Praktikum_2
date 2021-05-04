@@ -5,11 +5,11 @@ import de.hsos.prog3.team5.ab02.util.*;
 
 public class NutzerEingabe {
     private EinUndAusgabe io;
-    private static int MIN = 2;
-    private static int MAX = 50;
+    private static int MINZEILEN = 2;
+    private static int MAXZEILEN = 100;
 
     private static int MINSCHRITTE = 1;
-    private static int MAXSCHRITTE = 50;
+    //private static int MAXSCHRITTE = 50;
 
     public NutzerEingabe(EinUndAusgabe io){
         if(io != null){
@@ -22,7 +22,7 @@ public class NutzerEingabe {
         while (true){
             System.out.print("Anzahl der Zeilen (mind. 2): ");
             anzahl=  io.leseInteger();
-            if(anzahl < MIN)
+            if(anzahl < MINZEILEN || anzahl > MAXZEILEN)
 
                 System.out.println("Bitte nochmal!");
             else
@@ -49,8 +49,7 @@ public class NutzerEingabe {
         while (true){
             System.out.print("Anzahl der Simulationsschritte (min. 1 & max. 50; Abbruch mit negativer Zahl): ");
             anzahl = io.leseInteger();
-            if(anzahl == 0 || anzahl > MAXSCHRITTE)
-
+            if(anzahl == 0)
                 System.out.println("Bitte nochmal!");
             else if (anzahl < 0)
                 return -1;

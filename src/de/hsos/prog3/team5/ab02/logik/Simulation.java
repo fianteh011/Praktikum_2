@@ -4,7 +4,7 @@ public interface Simulation {
     void berechneAnfangsGeneration(int anzahlDerZeilen, int wahrscheinlichkeitDerBesiedlung);
 
 
-    void berechneFolgeGeneration(int berechnungschnitte) throws InterruptedException;
+    boolean berechneFolgeGeneration(int berechnungschnitte) throws InterruptedException;
 
     void anmeldenFuerAktualisierungBeiAenderung(BeiAenderung beiAenderung);
 

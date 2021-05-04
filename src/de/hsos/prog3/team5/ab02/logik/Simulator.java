@@ -39,28 +39,39 @@ public class Simulator implements Simulation {
 
     @Override
 
-    public void berechneFolgeGeneration(int berechnungschritte) throws InterruptedException {
-
+    public boolean berechneFolgeGeneration(int berechnungschritte) throws InterruptedException {
+        boolean geaendert = false;
         for (int b = 0; b < berechnungschritte; b++){
+
+            //Flag zur Anzeige einer Aenderung des Spielfelds
+            geaendert = false;
+
             Thread.sleep(1000);
             for (int x = 0; x < spielfeld.length; x++) {
                 for (int y = 0; y < spielfeld.length; y++) {
                     //System.out.println(spielfeld[x][y]);
 
-                    int neighbors = nachbar(x,y);
-                    System.out.println(neighbors);
-                    if(!(spielfeld[x][y] == BEWOHNT && (neighbors == 2 || neighbors == 3))){
+                    int neighbors = anzahlBewohnteNachbarn(x,y);
+                    //System.out.println(neighbors);
+                    if(spielfeld[x][y] == BEWOHNT && (neighbors < 2 || neighbors > 3)){
                         spielfeld[x][y] = UNBEWOHNT;
+                        geaendert = true;
                     }else if (spielfeld[x][y] == UNBEWOHNT && neighbors == 3){
                         spielfeld[x][y] = BEWOHNT;
+                        geaendert = true;
                     }
                 }
             }
-            beiAenderung.aktualisiere(spielfeld);
+            if (geaendert){
+                beiAenderung.aktualisiere(spielfeld);
+            }else{
+                return false;
+            }
         }
+        return geaendert;
     }
 
-    private int nachbar(int x, int y){
+    private int anzahlBewohnteNachbarn(int x, int y){
         //https://www.geeksforgeeks.org/program-for-conways-game-of-life/
         int nachbar = 0;
         if (spielfeld[x][y] == BEWOHNT){

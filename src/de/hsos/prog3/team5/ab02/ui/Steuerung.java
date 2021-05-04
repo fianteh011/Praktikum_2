@@ -26,7 +26,10 @@ public class Steuerung implements BeiAenderung {
                 break;
             }
             try {
-                sim.berechneFolgeGeneration(schritte);
+                if (!sim.berechneFolgeGeneration(schritte)){
+                    System.out.println("Endzustand erreicht!");
+                    break;
+                }
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -44,7 +47,8 @@ public class Steuerung implements BeiAenderung {
 
     @Override
     public void aktualisiere(boolean[][] neueGeneration) {
-        //anmeldenFuerAktualisierungBeiAenderung
+
         spielfeldDarstellung.spielfeldDarstellen(neueGeneration);
     }
+
 }
