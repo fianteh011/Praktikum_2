@@ -38,6 +38,7 @@ public class Simulator implements Simulation {
     }
 
     @Override
+
     public void berechneFolgeGeneration(int berechnungschritte) throws InterruptedException {
 
         for (int b = 0; b < berechnungschritte; b++){
