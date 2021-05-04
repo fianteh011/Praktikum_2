@@ -38,13 +38,4 @@ public class SpielfeldDarstellung {
     public void abwischen() {
         this.ib.abwischen();
     }
-
-    public static void main(String[] args) {
-        Interaktionsbrett ib = new Interaktionsbrett();
-        SpielfeldDarstellung sfd = new SpielfeldDarstellung(ib);
-//        boolean[][] test = new boolean[0][0];
-
-//        sfd.spielfeldDarstellen(test);
-
-    }
 }
