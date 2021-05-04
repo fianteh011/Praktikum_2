@@ -7,8 +7,6 @@ public class NutzerEingabe {
     static int MIN = 2;
     static int MAX = 50;
     private EinUndAusgabe io;
-//    private static int MIN = 2;
-//    private static int MAX = 50;
 
     public NutzerEingabe(EinUndAusgabe io) {
         if (io != null) {
