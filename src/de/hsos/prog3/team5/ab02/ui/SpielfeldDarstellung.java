@@ -25,7 +25,8 @@ public class SpielfeldDarstellung {
                         (SEITENLAENGE / spielfeld.length) * y,
                         SEITENLAENGE / spielfeld.length);
                 sq.darstellenRahmen(ib);
-
+                //System.out.println(SEITENLAENGE / spielfeld.length);
+                //System.out.println((SEITENLAENGE / spielfeld.length) * x + ", " + (SEITENLAENGE / spielfeld.length) * y);
                 if (spielfeld[x][y] == Simulator.BEWOHNT) {
                     sq.darstellenFuellung(ib);
                 }

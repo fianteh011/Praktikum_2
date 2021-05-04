@@ -22,18 +22,18 @@ public class Quadrat {
     //setter & getter
     //(Stil-)Frage: getter und setter sinnvoll(da private), oder lieber direkten Zugriff auf die Variablen?
     private void setX(int x){
-        if (0 < x && x < dimX - this.seitenlaenge){
+        if (0 <= x && x < dimX - this.seitenlaenge){
             this.x = x;
         }else{
-            System.out.println("Dimension ueberschritten: x");
+            System.out.println("Dimension ueberschritten: " + x);
         }
     }
 
     private void setY(int y){
-        if (0 < y && y < dimY - this.seitenlaenge){
+        if (0 <= y && y < dimY - this.seitenlaenge){
             this.y = y;
         }else{
-            System.out.println("Dimension ueberschritten: y");
+            System.out.println("Dimension ueberschritten: " + y);
         }
     }
 
