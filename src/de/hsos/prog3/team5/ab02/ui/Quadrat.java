@@ -8,6 +8,7 @@ public class Quadrat {
     private int seitenlaenge = 0;
 
     //Größe des Interaktionsbrettes; nicht veränderbar
+    //Alternative: Default Werte im Konstruktor
     private static final int dimX = 380;
     private static final int dimY = 380;
 

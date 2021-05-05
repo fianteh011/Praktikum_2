@@ -79,10 +79,13 @@ public class Simulator implements Simulation {
         }
         for (int i = -1; i <= 1; i++){
             for (int j = -1; j <= 1; j++){
-                if (x+i < 0 || y+j < 0 || x+i >= spielfeld.length || y+j >= spielfeld.length){
+                //
+                if (x + i < 0 || y + j < 0 || x + i >= spielfeld.length || y + j >= spielfeld.length) {
+                    //Alternative: sprechender boolean Wert
                     continue;
+
                 }
-                if (spielfeld[x + i][y + j] == BEWOHNT){
+                if (spielfeld[x + i][y + j] == BEWOHNT) {
                     nachbar++;
                 }
 
